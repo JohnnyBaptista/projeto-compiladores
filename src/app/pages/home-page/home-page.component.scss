@@ -1,0 +1,21 @@
+.card {
+  width: 325px;
+  margin: 16px;
+}
+
+.cards {
+  margin: 16px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.card-icon {
+  border-radius: 0;
+  position: relative;
+  top: 2px;
+}
+
+.disabled {
+  filter: grayscale(1);
+}

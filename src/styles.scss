@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  --color-primary: #33673B;
+  --color-accent: #2457ff;
+}
+
+/** Essa classe transforma ícones preenchidos em ícones outlined */
+.outlined {
+  font-family: 'Material Icons Outlined';
+}
+
+/** Classe colocada em linhas de erro no componente de erro */
+.destaque-erro {
+  color: white;
+  background: #f44336a1;
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.hotkey {
+  display: inline-block;
+  opacity: 0.5;
+  margin-left: 8px;
+}
