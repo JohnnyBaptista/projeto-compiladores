@@ -1,11 +1,11 @@
 <mat-drawer-container autosize [hasBackdrop]="false">
-  <mat-drawer #tokensDrawer mode="side" position="end" class="token-drawer">
+  <!-- <mat-drawer #tokensDrawer mode="side" position="end" class="token-drawer">
 
-  </mat-drawer>
+  </mat-drawer> -->
   <div class="container">
     <div class="actions">
       <div class="spacer"></div>
-      <button
+      <!-- <button
         [disabled]="analisadorLexico.tokens$.value.length === 0"
         class="button"
         type="button"
@@ -23,7 +23,7 @@
           tokensDrawer.opened ? "chevron_right" : "chevron_left"
         }}</mat-icon>
         <span class="hotkey">ctrl+k</span>
-      </button>
+      </button> -->
     </div>
     <app-editor></app-editor>
     <error-console></error-console>
