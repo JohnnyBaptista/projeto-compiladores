@@ -95,11 +95,10 @@ export class AnalisadorGramaticalService {
       let token;
       token = this.input[0];
       if (!token) break;
-      if (this.stack[this.stack.length - 1].match(/\[\[.+\]\]/g)) {
-        this.semantica(this.stack.pop(), lastTerminal);
-        continue;
-      }
-      // HACK DE MILHÕES para validar identificadores válidos e números via primeiro caractere
+      // if (this.stack[this.stack.length - 1].match(/\[\[.+\]\]/g)) {
+      //   this.semantica(this.stack.pop(), lastTerminal);
+      //   continue;
+      // } -> análise semantica
       if (
         [
           'número natural',

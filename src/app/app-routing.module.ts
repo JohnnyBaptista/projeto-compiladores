@@ -9,12 +9,11 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
   // { path: '', component: HomePageComponent },
-  { path: '', component: AnaliseLexicaComponent },
+  // { path: '', component: AnaliseLexicaComponent },
   // { path: 'calculator', component: HomeComponent },
   // { path: 'sobre', component: AboutComponent },
-  // { path: 'analiseLexica', component: AnaliseLexicaComponent },
-  // { path: 'analiseGramatical', component: AnaliseGramaticalComponent },
-  // { path: 'analiseSemantica', component: AnaliseSemanticaComponent },
+  { path: '', component: AnaliseGramaticalComponent },
+  // { path: '', component: AnaliseSemanticaComponent },
 ];
 
 @NgModule({
