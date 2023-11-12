@@ -3,6 +3,7 @@ import { MatDrawer } from '@angular/material/sidenav';
 import { gramaticaLALG } from 'src/app/gramatica/gramaticaLALG';
 import { AnalisadorGramaticalService } from 'src/app/services/analisador-gramatical/analisador-gramatical.service';
 import { AnalisadorLexicoService } from 'src/app/services/analisador-lexico/analisador-lexico.service';
+import { AnalisadorSemanticoService } from 'src/app/services/analisador-semantico/analisador-semantico.service';
 
 @Component({
   selector: 'app-analise-semantica',
@@ -14,12 +15,15 @@ export class AnaliseSemanticaComponent implements OnInit {
 
   constructor(
     public analisadorLexico: AnalisadorLexicoService,
-    private analisadorGramatical: AnalisadorGramaticalService
+    private analisadorGramatical: AnalisadorGramaticalService,
+    private analisadorSemantico: AnalisadorSemanticoService,
   ) {}
 
   ngOnInit(): void {
     const selectedGrammar = gramaticaLALG;
     this.analisadorGramatical.selectGrammar(selectedGrammar);
+    this.analisadorSemantico.teste_jp();
+    console.log(this.analisadorSemantico.tabelaDeSimbolos)
   }
 
   ngAfterViewInit(): void {
@@ -30,5 +34,6 @@ export class AnaliseSemanticaComponent implements OnInit {
         this.analisadorGramatical.parse();
       }
     });
+    console.log(this.analisadorSemantico.tabelaDeSimbolos)
   }
 }

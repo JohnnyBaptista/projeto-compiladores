@@ -20,16 +20,30 @@ export class AnalisadorSemanticoService {
   simbolos$ = new BehaviorSubject<LinhaSimbolo[]>([]);
 
   constructor() {
-    // const teste = new LinhaSimbolo();
-    // teste.cadeia = 'teste_do_rafa';
-    // teste.token = 'id';
-    // teste.categoria = 'var';
-    // teste.tipo = 'int';
-    // teste.valor = 666;
-    // teste.escopo = 'main';
-    // teste.utilizada = false;
-    // this.tabelaDeSimbolos.push(teste);
-    // this.simbolos$.next(this.tabelaDeSimbolos);
+    const teste = new LinhaSimbolo();
+    teste.cadeia = 'teste_do_rafa';
+    teste.token = 'id';
+    teste.categoria = 'var';
+    teste.tipo = 'int';
+    teste.valor = 666;
+    teste.escopo = 'main';
+    teste.utilizada = false;
+    this.tabelaDeSimbolos.push(teste);
+    this.simbolos$.next(this.tabelaDeSimbolos);
+  }
+
+  teste_jp() {
+    const teste = new LinhaSimbolo();
+    teste.cadeia = 'teste_do_rafa';
+    teste.token = 'id';
+    teste.categoria = 'var';
+    teste.tipo = 'int';
+    teste.valor = 666;
+    teste.escopo = 'main';
+    teste.utilizada = false;
+    this.tabelaDeSimbolos.push(teste);
+    this.simbolos$.next(this.tabelaDeSimbolos);
+    console.log({simbolos: this.tabelaDeSimbolos})
   }
 
   add(

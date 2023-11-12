@@ -8,12 +8,12 @@ import { AnaliseSemanticaComponent } from './pages/analise-semantica/analise-sem
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
-  // { path: '', component: HomePageComponent },
-  // { path: '', component: AnaliseLexicaComponent },
-  // { path: 'calculator', component: HomeComponent },
-  // { path: 'sobre', component: AboutComponent },
-  { path: '', component: AnaliseGramaticalComponent },
-  // { path: '', component: AnaliseSemanticaComponent },
+  { path: '', component: HomePageComponent },
+  { path: 'lexico', component: AnaliseLexicaComponent },
+  { path: 'calculadora', component: HomeComponent },
+  { path: 'sobre', component: AboutComponent },
+  { path: 'sintatico', component: AnaliseGramaticalComponent },
+  { path: 'semantico', component: AnaliseSemanticaComponent },
 ];
 
 @NgModule({
