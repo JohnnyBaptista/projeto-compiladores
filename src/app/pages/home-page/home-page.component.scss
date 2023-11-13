@@ -1,3 +1,48 @@
+.buttonLink {
+  background: transparent; outline: none;
+  width: 100%;
+  position: relative;
+  border: 2px solid #fff;
+  padding: 15px 50px;
+  overflow: hidden;
+  color: #fff   ;
+}
+
+.buttonLink:hover{cursor: pointer}
+
+.buttonLink:hover:before{
+  opacity: 1; 
+  transform: translate(0,0);
+}
+
+.buttonLink:before{
+  content: 'Acessar';
+  position: absolute;
+  top: 1.4em; 
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  opacity: 0;
+  transform: translate(-100%,0);
+  transition: all .4 s ease-in-out;
+}
+
+ .buttonLink div{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  transition: all .3s ease-in-out;
+}
+
+.buttonLink:hover div{
+  opacity: 0; 
+  transform: translate(100%,0)
+}
+
 .card {
   width: 325px;
   margin: 16px;
@@ -6,16 +51,11 @@
 .cards {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
   height: 100vh;
   width: 100%;
-}
-
-.card-icon {
-  border-radius: 0;
-  position: relative;
-  top: 2px;
+  gap: 20px !important;
 }
 
 .disabled {

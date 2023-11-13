@@ -24,7 +24,6 @@ export class SimbolosComponent implements OnInit {
   ngOnInit(): void {
     this.analisadorSemanticoService.simbolos$.subscribe(
       (simbolos: LinhaSimbolo[]) => {
-        // console.log('tokens arrived', tokens);
       }
     );
   }

@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 import { gramaticaLALG } from 'src/app/gramatica/gramaticaLALG';
-import { gramaticaRAFA } from 'src/app/gramatica/gramaticaRAFA';
 import { AnalisadorGramaticalService } from 'src/app/services/analisador-gramatical/analisador-gramatical.service';
 import { AnalisadorLexicoService } from 'src/app/services/analisador-lexico/analisador-lexico.service';
 
