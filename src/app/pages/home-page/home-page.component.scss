@@ -27,7 +27,7 @@
   font-size: .8em;
   opacity: 0;
   transform: translate(-100%,0);
-  transition: all .4 s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
  .buttonLink div{
@@ -41,11 +41,6 @@
 .buttonLink:hover div{
   opacity: 0; 
   transform: translate(100%,0)
-}
-
-.card {
-  width: 325px;
-  margin: 16px;
 }
 
 .cards {

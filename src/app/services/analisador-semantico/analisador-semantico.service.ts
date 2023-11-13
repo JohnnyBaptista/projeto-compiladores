@@ -21,7 +21,7 @@ export class AnalisadorSemanticoService {
 
   constructor() {
     const teste = new LinhaSimbolo();
-    teste.cadeia = 'teste_do_rafa';
+    teste.cadeia = 'teste';
     teste.token = 'id';
     teste.categoria = 'var';
     teste.tipo = 'int';
@@ -34,7 +34,7 @@ export class AnalisadorSemanticoService {
 
   teste_jp() {
     const teste = new LinhaSimbolo();
-    teste.cadeia = 'teste_do_rafa';
+    teste.cadeia = 'teste';
     teste.token = 'id';
     teste.categoria = 'var';
     teste.tipo = 'int';
@@ -64,6 +64,7 @@ export class AnalisadorSemanticoService {
     this.tabelaDeSimbolos.push(newLine);
 
     this.simbolos$.next(this.tabelaDeSimbolos);
+    console.log(newLine)
   }
 
   check(cadeia: string, categoria: string): boolean {

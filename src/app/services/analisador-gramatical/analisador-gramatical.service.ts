@@ -575,7 +575,7 @@ export class AnalisadorGramaticalService {
     } else if (token === '[[declaração_id]]') {
       console.log('[SEMANTICA] Declaração de variáveis: var', prev);
       if (this.semanticaTipo !== 'int' && this.semanticaTipo !== 'boolean')
-        console.log('WTF TIPO?');
+        console.log('Invalido');
       if (this.analisadorSemantico.check(prev.token, 'var')) {
         this.errorService.addErro(
           301,
