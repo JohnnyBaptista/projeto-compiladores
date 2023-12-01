@@ -16,14 +16,31 @@ export class AnaliseSemanticaComponent implements OnInit {
   constructor(
     public analisadorLexico: AnalisadorLexicoService,
     private analisadorGramatical: AnalisadorGramaticalService,
-    private analisadorSemantico: AnalisadorSemanticoService,
+    private analisadorSemantico: AnalisadorSemanticoService
   ) {}
 
   ngOnInit(): void {
     const selectedGrammar = gramaticaLALG;
-    this.analisadorGramatical.selectGrammar(selectedGrammar);
-    this.analisadorSemantico.teste_jp();
-    console.log(this.analisadorSemantico.tabelaDeSimbolos)
+    // this.analisadorGramatical.selectGrammar(selectedGrammar);
+    console.log({ selectedGrammar });
+    // console.log(this.analisadorSemantico.tabelaDeSimbolos);
+    const codigoLALG = `
+  program teste;
+  int alfa, beta;
+  boolean omega;
+
+  procedure meuProcedimento(var x: int; y: boolean);
+  begin
+    // Corpo do procedimento
+  end;
+
+  begin
+    alfa:=false;
+    beta:= 1 + 1
+  end.
+`;
+    this.analisadorSemantico.analisarPrograma(codigoLALG);
+    console.log(this.analisadorSemantico.bloco);
   }
 
   ngAfterViewInit(): void {
@@ -34,6 +51,6 @@ export class AnaliseSemanticaComponent implements OnInit {
         this.analisadorGramatical.parse();
       }
     });
-    console.log(this.analisadorSemantico.tabelaDeSimbolos)
+    console.log(this.analisadorSemantico.tabelaDeSimbolos);
   }
 }

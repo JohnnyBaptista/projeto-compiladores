@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { AppComponent } from './app.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -33,7 +32,6 @@ import { SimbolosComponent } from './components/simbolos/simbolos.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HomePageComponent,
     AboutComponent,
     AnaliseLexicaComponent,
